@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./css/area.css")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+    title AI -Introduction
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js")
+  body
+    h2(class="text-center title-h2") 人工智慧
+    h1(class="text-center title-h1 ml3") Artificial Intelligence
+    ul.list
+      li 
+        a(href="./index.html") AI基本介紹
+      li
+        a(href="./area.html") AI分支領域
+      li
+        a(href="./resource.html") AI學習資源
+      li
+        a(href="./team.html") 團隊介紹
+    .branch
+      h3 人工智慧領域
+      p 人工智慧領域廣泛，包括機器學習/深度學習，自然語言處理，電腦視覺及專家系統。以下內容為各領域的詳細介紹。
+    .ml
+      .content
+        h3.staring 機器學習 Machine Learning
+        p 機器學習是通過演算法來分析數據、從中學習，以及判斷或預測現實世界裡的某些事，並非手動編寫帶有特定指令的軟體程序來完成某個特殊任務，而是使用大量的數據和演算法來「訓練」機器，讓它學習如何執行任務。
+        p 實際應用例如：預測某封電子郵件是否為垃圾郵件、預測某筆線上交易是否為詐欺行為。
+        br
+        p 以下連結為以圖例說明如何建造一個能夠區別紐約市和舊金山房屋的機器學習模型:
+        a(href="http://www.r2d3.us/%E5%9C%96%E8%A7%A3%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AC%AC%E4%B8%80%E7%AB%A0/?fbclid=IwAR12yJBtkfIjoAMuP0ZD_00xfOOWtFzODWWvhfFTDh14BKjAZTlrKC4jdyU", title="title") 圖解機器學習
+          i.fas.fa-hand-point-left
+      img(src="./imgs/step.png", alt="").step
+    .dl
+      img(src="./imgs/network.jpg", alt="").network
+      .content
+        h3.staring 深度學習 Deep Learning
+        p 深度學習為機器學習的一分支領域，主要利用「深度神經網路」(Deep Neural Network)，模擬人類大腦神經系統，讓電腦機器自己從資料中學習這組資料可以做什麼樣的資訊擷取。
+        br
+        p 深度神經網路主要分為三種層次:
+        | 資料透過這一連串的類神經結構傳遞，就能夠讓機器學習到某些特徵，並用這些特徵來達到人類想要達成的目的。
+        ul.layer
+          li 輸入層-Input layer
+          li 隱藏層-Hidden layer
+          li 輸出層-Output layer
+    .neural-network
+      h4 點擊以下圖片可以前往類神經網路的展示網站，可自訂神經元 / 隱藏層 / 各項參數等
+      a(href="https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,4,4,4,4&seed=0.05245&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=true&xSquared=true&ySquared=true&cosX=false&sinX=true&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false", title="title")
+        img(src="./imgs/try.png", alt="")
+    .nlp
+      .content
+        h3.staring 自然語言處理 Natural Language Processing, NLP
+        p 自然語言處理，是針對人類語言文字進行各種自動化處理的技術，其目標是要讓電腦認識、分析、理解、合成人類語言，進行各式運算，希望最終能以自然語言為媒介，讓電腦跟人類順暢的溝通，以完成各項指定的任務。
+        p 常見應用:
+        ul
+          li 機器翻譯: 分析輸入的語言並翻譯成指定需要的語言
+          li 情緒分析: 分析人類說話的語氣字眼等
+          li 搜尋建議: 將搜尋結果相關的字詞推薦給搜尋者，例如常常可以看到google搜尋頁面底下出現: xxx的相關搜尋
+          li 詞類標示: 將輸入的文字進行詞類分析並標示出來
+          li 語音辨識: 常見應用為將說出的話轉為文字，利用聲音控制機器等
+      .voice-input
+        form
+          p.ml2 來試試語音輸入訊息吧~ (需要使用麥克風)
+          .form-group
+            label 最後結果
+            input#textBox.form-control(type='text')
+          .form-group
+            label 中間結果
+            input#tempBox.form-control(type='text')
+          .lang 辨識語言：
+            select(id="langCombo")
+              option(value='en-US') 英文(美國)
+              option(value='cmn-Hant-TW') 中文(台灣)
+            button#startStopButton.btn.btn-primary(type='button' onclick='startButton(event)') 辨識
+          .result
+            label#infoBox
+    .border
+      .view
+        h3.staring 電腦視覺 Computer Vision
+        p 利用一個代替人眼的圖像感測器獲取物體的圖像，將圖像轉換成數字圖像，並利用電腦進行深度學習，模擬人的判別準則去理解和識別圖像，達到分析圖像和作出結論的目的
+        p 常見應用包括:
+        p * 人類身體部位辨識: 指紋辨識、臉部辨識、視網膜辨識、虹膜辨識、掌紋辨識
+        p * 自動駕駛: 必須在車輛部署攝像頭、激光雷達、毫米波雷達等傳感器才能辨識周圍的障礙物，將拍攝到的障礙物轉為矩形並進行迴避
+    .system
+      .content
+        hr
+        h3 專家系統 Expert System
+        p 專家系統是一種在特定領域內具有專家水平解決問題能力的程式系統。它能夠有效地運用專家多年積累的有效經驗和專門知識，通過模擬專家的思維過程，解決需要專家才能解決的問題。
+        p 專家系統的組成要件通常包含如下6部分：
+        ul
+          li 知識庫：知識庫包含所有解決問題的知識，如解決問題的策略及關於問題的事實。
+          li 推論機：主要是提供軟體將讀者問題和資料庫的事實、規則連接起來，進行邏輯推演的步驟。
+          li 使用者介面：便利系統與使用者之間的溝通。其功用在於使輸入、輸出的相關資料能夠溝通，並得以解決問題。
+          li 工作區：記憶體的一部分，所有知識庫中的資料都儲存在工作區，並可用以儲存遇到的問題及狀況。
+          li 解釋次系統：解釋次系統可顯示出推理的過程，並答覆使用者有關問題。
+          li 知識獲取次系統：人類專家可隨時藉由此知識獲取次系統，輸入或更新專家知識及推理方法，以增加專家系統的功能。
+        hr
+      img(src="./imgs/robot3.jpg", alt="")
+    .footer
+      p Copyright © AI Introduction 2019 - 建議使用 Chrome 瀏覽器，搭配 1440x697 可得最佳瀏覽畫面
+    .toTop
+      a(href="#")
+        i.fas.fa-arrow-circle-up
+          span 回到頂端
+    script
+      include ./js/index.js

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    link(rel="stylesheet", href="./css/team.css")
+    link(href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&display=swap" rel="stylesheet")
+    link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous")
+    title AI -Introduction
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js")
+  body
+    h2(class="text-center title-h2") 人工智慧
+    h1(class="text-center title-h1 ml3") Artificial Intelligence
+    ul.list
+      li 
+        a(href="./index.html") AI基本介紹
+      li
+        a(href="./area.html") AI分支領域
+      li
+        a(href="./resource.html") AI學習資源
+      li
+        a(href="./team.html") 團隊介紹
+    .talk
+      h3.title 感言
+      p 很高興參加這次的慈善/科技/人文網頁設計比賽，我們這隊想要介紹的是人工智慧，因此便搜集了人工智慧的資料，還有實作一個語音輸入程式(詳見AI分支領域的自然語言處理部分)，讓觀看我們網頁的人們更了解AI。
+      p 除此之外，我們還另外找了一些人工智慧的免費線上課程放在AI學習資源，讓看完介紹網頁並想開始學習人工智慧的朋友們可以獲得一些實用的資源來做學習。
+      hr
+      h3.title 分工與技術
+      p 在製作整個網頁分工的部分，由偉晏負責蒐集資料並做整理，並設計網頁介面，然後再由育能將網頁實作出來，沒有套模板，80%為純 CSS 手刻網頁 + 20%為 Bootstrap 元件。
+      p 本網頁所使用的技術包括:
+      ul
+        li PUG/HTML
+        li Sass/CSS
+        li Bootstrap
+        li JavaScript
+        li Gulp (編譯PUG/Sass/作打包)
+      hr
+      h3.title 開發團隊
+      .card-deck
+        .card
+          img.card-img-top(src='./imgs/developer.jpg')
+          .card-body
+            h5.card-title 謝育能
+            p.card-text 喜歡前端技術，歡迎交流
+            p.card-text
+              a(href="https://github.com/a90100") Github
+                i.fab.fa-github
+            p.card-text
+              a(href="https://medium.com/@snh90100") Medium
+                i.fab.fa-medium
+        .card
+          img.card-img-top(src='./imgs/developer2.jpg')
+          .card-body
+            h5.card-title 張偉晏
+            p.card-text 最喜歡玩寶可夢
+    h3 參考資料
+    .refer-data.row
+      .col-6
+        a(href="http://scimonth.blogspot.com/2018/03/blog-post_56.html") 
+          p 科學月刊
+        a(href="https://wiki.mbalib.com/zh-tw/人工智能") 
+          p MBA智庫百科
+        a(href="https://dsgn.tw/archives/56345/") 
+          p 人工智慧簡介
+        a(href="http://technews.tw/2017/10/05/ai-machine-learning-and-deep-learning/") 
+          p 翻轉人類未來的 AI 科技：機器學習與深度學習
+        a(href="https://okai.brown.edu/zh/chapter1.html") 
+          p OKAI
+      .col-6
+        a(href="http://www.r2d3.us/圖解機器學習第一章/?fbclid=IwAR12yJBtkfIjoAMuP0ZD_00xfOOWtFzODWWvhfFTDh14BKjAZTlrKC4jdyU", title="title") 
+          p 圖解機器學習
+        a(href="https://wiki.mbalib.com/zh-tw/专家系统") 
+          p 專家系統
+        a(href="https://aws.amazon.com/tw/computer-vision/") 
+          p 什麼是電腦視覺？
+        a(href="https://ithelp.ithome.com.tw/articles/10209418") 
+          p 深度學習在自然語言處理（NLP）的技術與應用
+    .footer
+      p Copyright © AI Introduction 2019 - 建議使用 Chrome 瀏覽器，搭配 1440x697 可得最佳瀏覽畫面
+    .toTop
+      a(href="#")
+        i.fas.fa-arrow-circle-up
+          span 回到頂端
+    script
+      include ./js/index.js

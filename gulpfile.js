@@ -1,15 +1,15 @@
-var gulp = require('gulp');
-let cleanCSS = require('gulp-clean-css');
-var pipeline = require('readable-stream').pipeline;
+const gulp = require('gulp');
+const cleanCSS = require('gulp-clean-css');
+const pipeline = require('readable-stream').pipeline;
 const $ = require('gulp-load-plugins')();
 
 gulp.task('pug', function buildHTML() {
-  return gulp.src('source/html/*.pug')
+  return gulp.src('source/*.pug')
     .pipe($.plumber())
     .pipe($.pug({
 
     }))
-    .pipe(gulp.dest('./public/html'))
+    .pipe(gulp.dest('./public'))
 });
 
 gulp.task('sass', function () {
@@ -55,7 +55,7 @@ gulp.task('img-min', () =>
 );
 
 gulp.task('watch', function () {
-  gulp.watch('source/html/*.pug', gulp.series('pug'));
+  gulp.watch('source/*.pug', gulp.series('pug'));
   gulp.watch('source/sass/*.sass', gulp.series('sass'));
   gulp.watch('source/js/*.js', gulp.series('babel'));
 });

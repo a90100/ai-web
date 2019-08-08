@@ -1,0 +1,65 @@
+@import 'node_modules/bootstrap/scss/bootstrap'
+
+*
+  font-family: 'Noto Sans TC', sans-serif
+body
+  background-image: url('./../imgs/bg.jpg')
+  background-size: cover
+  background-attachment: fixed
+  .title-h2
+    margin-top: 80px
+    color: #42A5F5
+    letter-spacing: 40px
+  .title-h1
+    font-size: 62px
+    color: #fff
+    letter-spacing: 2px
+
+.list
+  display: flex
+  background-color: rgba(21, 101, 192, 0.5)
+  margin-top: 70px
+  justify-content: center
+  list-style: none
+  padding: 35px 0
+  li
+    padding: 0 30px
+    font-size: 20px
+    transition: 0.5s
+    &:hover
+      font-size: 28px
+    a
+      color: #fff
+      text-decoration: none
+
+.footer
+  width: 100%
+  background-color: rgba(21, 101, 192, 0.5)
+  color: #fff
+  padding: 30px 0
+  display: flex
+  justify-content: center
+
+.toTop
+	position: fixed
+	bottom: 15px
+	right: 15px
+  color: #fff
+
+.fa-arrow-circle-up
+  font-size: 20px
+  color: #fff
+  span
+    margin-left: 5px
+
+.staring
+  animation: staring 6s infinite
+  @keyframes staring
+    0%,100%
+      opacity: 1
+    50%
+      opacity: 0.1
+
+.ml2 .letter
+  display: inline-block
+  line-height: 1em

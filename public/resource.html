@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="stylesheet" href="./css/resource.css"/><link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/><title>AI -Introduction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script></head><body><h2 class="text-center title-h2">人工智慧</h2><h1 class="text-center title-h1 ml3">Artificial Intelligence</h1><ul class="list"><li> <a href="./index.html">AI基本介紹</a></li><li><a href="./area.html">AI分支領域</a></li><li><a href="./resource.html">AI學習資源</a></li><li><a href="./team.html">團隊介紹</a></li></ul><div class="define"><h3>人工智慧學習資源</h3><p>假如有興趣研究和學習人工智慧的話，以下有許多資源可以參考喔~</p></div><h1 class="ml2">成為AI工程師基本技能</h1><div class="border"><div class="view row"><div class="col-3"><h3>數學基礎:</h3><ul><li>線性代數和微積分基礎</li><li>統計學相關基礎</li><li>相關線性分析</li></ul></div><div class="col-3"><h3>程式設計能力:</h3><p>掌握相關的程式語言，比如 C / Python / Go / Java 等，目前 Python 是機器學習深度學習領域最主流的程式語言。</p></div><div class="col-3"><h3>軟體工程/資料結構/演算法等技術</h3><p>電腦科學領域必備技能</p></div><div class="col-3"><h3>機器學習技術:</h3><p>創造並部署機器學習演算法，調試/調節製作出的資料模型</p></div></div></div><h1 class="ml2">人工智慧學習課程(皆為免費資源)</h1><div class="card-columns"><div class="card"><a href="https://aischool.microsoft.com/en-us/home"><img class="card-img-top" src="./imgs/ai-school.png"/></a><div class="card-body"><h5 class="card-title">AL School:</h5><p class="card-text">微軟推出的AI學習平台</p><a href="https://aischool.microsoft.com/en-us/home">開始學習</a></div></div><div class="card"><a href="https://www.coursera.org/learn/machine-learning#syllabusCoursera"><img class="card-img-top" src="./imgs/cource-ml.png"/></a><div class="card-body"><h5 class="card-title">史丹佛大學的機器學習課程</h5><p class="card-text">Coursera上的課程</p><a href="https://www.coursera.org/learn/machine-learning#syllabusCoursera">開始學習</a></div></div><div class="card"><a href="https://www.coursera.org/specializations/deep-learning"><img class="card-img-top" src="./imgs/cource-dl.png"/></a><div class="card-body"><h5 class="card-title">deeplearning.ai的深度學習課程</h5><p class="card-text">Coursera上的課程</p><a href="https://www.coursera.org/specializations/deep-learning">開始學習</a></div></div><div class="card"><a href="https://github.com/MLEveryday/100-Days-Of-ML-Code"><img class="card-img-top" src="./imgs/100day.png"/></a><div class="card-body"><h5 class="card-title">100-Days-Of-ML-Code</h5><p class="card-text">連續100天機器學習(簡體中文)</p><a href="https://github.com/MLEveryday/100-Days-Of-ML-Code">開始學習</a></div></div><div class="card"><a href="https://github.com/apachecn/AiLearning"><img class="card-img-top" src="./imgs/ai-learning.png"/></a><div class="card-body"><h5 class="card-title">AI learning</h5><p class="card-text">學習內容豐富的Github Repo</p><a href="https://github.com/apachecn/AiLearning">開始學習</a></div></div><div class="card"><a href="https://www.youtube.com/watch?v=er8RQZoX3yk&amp;list=PL9Hr9sNUjfsmEu1ZniY0XpHSzl5uihcXZ"><img class="card-img-top" src="./imgs/tensorflow.png"/></a><div class="card-body"><h5 class="card-title">知名框架Tensorflow教學</h5><p class="card-text">在youtube上的影片教學</p><a href="https://www.youtube.com/watch?v=er8RQZoX3yk&amp;list=PL9Hr9sNUjfsmEu1ZniY0XpHSzl5uihcXZ">開始學習</a></div></div><div class="card"><a href="https://developers.google.com/machine-learning/crash-course/"><img class="card-img-top" src="./imgs/cource-ml2.png"/></a><div class="card-body"><h5 class="card-title">機器學習 (Google推出)</h5><p class="card-text">搭配Tensorflow API 進行學習</p><a href="https://developers.google.com/machine-learning/crash-course/">開始學習</a></div></div><div class="card"><div class="card-body"><h5 class="card-title">Kaggle</h5><p class="card-text">除了AI教學外還提供競賽</p><a href="https://www.kaggle.com/">開始學習</a></div></div></div><div class="footer"><p>Copyright © AI Introduction 2019 - 建議使用 Chrome 瀏覽器，搭配 1440x697 可得最佳瀏覽畫面</p></div><div class="toTop"><a href="#"><i class="fas fa-arrow-circle-up"><span>回到頂端</span></i></a></div><script>var infoBox; // 訊息 label
+var textBox; // 最終的辨識訊息 text input
+var tempBox; // 中間的辨識訊息 text input
+var startStopButton; // 「辨識/停止」按鈕
+var final_transcript = ''; // 最終的辨識訊息的變數
+var recognizing = false; // 是否辨識中
+
+function startButton(event) {
+  infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
+  textBox = document.getElementById("textBox"); // 取得最終的辨識訊息控制項 textBox
+  tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
+  startStopButton = document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
+  langCombo = document.getElementById("langCombo"); // 取得「辨識語言」這個選擇控制項
+
+  if (recognizing) { // 如果正在辨識，則停止。
+    recognition.stop();
+  } else { // 否則就開始辨識
+    textBox.value = ''; // 清除最終的辨識訊息
+    tempBox.value = ''; // 清除中間的辨識訊息
+    final_transcript = ''; // 最終的辨識訊息變數
+    recognition.lang = langCombo.value; // 設定辨識語言
+    recognition.start(); // 開始辨識
+  }
+}
+
+// 如果找不到 window.webkitSpeechRecognition 這個屬性，就是不支援語音辨識，要求使用者更新瀏覽器。 
+if (!('webkitSpeechRecognition' in window)) {
+  infoBox.innerText = "本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)";
+} else {
+  // 建立語音辨識物件 webkitSpeechRecognition
+  var recognition = new webkitSpeechRecognition();
+  recognition.continuous = true; // 設定連續辨識模式
+  recognition.interimResults = true; // 設定說話時會立即辨識
+
+  // 開始辨識
+  recognition.onstart = function () {
+    recognizing = true; // 設定為辨識中
+    startStopButton.value = "按此停止"; // 辨識中...按鈕改為「按此停止」。  
+    infoBox.innerText = "辨識中..."; // 顯示訊息為「辨識中」...
+  };
+
+  // 辨識完成
+  recognition.onend = function () {
+    recognizing = false; // 設定為「非辨識中」
+    startStopButton.value = "開始辨識"; // 辨識完成...按鈕改為「開始辨識」。
+    infoBox.innerText = ""; // 不顯示訊息
+  };
+
+  // 辨識有任何結果時
+  recognition.onresult = function (event) {
+    var interim_transcript = ''; // 中間結果
+    for (var i = event.resultIndex; i < event.results.length; ++i) { // 對於每一個辨識結果
+      if (event.results[i].isFinal) { // 如果是最終結果
+        final_transcript += event.results[i][0].transcript; // 將其加入最終結果中
+      } else { // 否則
+        interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
+      }
+    }
+    if (final_transcript.trim().length > 0) // 如果有最終辨識文字
+      textBox.value = final_transcript; // 顯示最終辨識文字
+    if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
+      tempBox.value = interim_transcript; // 顯示中間辨識文字
+  };
+}
+
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+    loop: true
+  })
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0, 1],
+    easing: "easeInOutQuad",
+    duration: 1125,
+    delay: function (el, i) {
+      return 75 * (i + 1)
+    }
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 500,
+    easing: "easeOutExpo",
+    delay: 500
+  });
+
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+    loop: true
+  })
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function (el, i) {
+      return 70 * i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script></body></html>

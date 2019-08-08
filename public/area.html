@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><meta http-equiv="X-UA-Compatible" content="ie=edge"/><link rel="stylesheet" href="./css/area.css"/><link href="https://fonts.googleapis.com/css?family=Noto+Sans+TC:300&amp;display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous"/><title>AI -Introduction</title><script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script></head><body><h2 class="text-center title-h2">人工智慧</h2><h1 class="text-center title-h1 ml3">Artificial Intelligence</h1><ul class="list"><li> <a href="./index.html">AI基本介紹</a></li><li><a href="./area.html">AI分支領域</a></li><li><a href="./resource.html">AI學習資源</a></li><li><a href="./team.html">團隊介紹</a></li></ul><div class="branch"><h3>人工智慧領域</h3><p>人工智慧領域廣泛，包括機器學習/深度學習，自然語言處理，電腦視覺及專家系統。以下內容為各領域的詳細介紹。</p></div><div class="ml"><div class="content"><h3 class="staring">機器學習 Machine Learning</h3><p>機器學習是通過演算法來分析數據、從中學習，以及判斷或預測現實世界裡的某些事，並非手動編寫帶有特定指令的軟體程序來完成某個特殊任務，而是使用大量的數據和演算法來「訓練」機器，讓它學習如何執行任務。</p><p>實際應用例如：預測某封電子郵件是否為垃圾郵件、預測某筆線上交易是否為詐欺行為。</p><br/><p>以下連結為以圖例說明如何建造一個能夠區別紐約市和舊金山房屋的機器學習模型:</p><a href="http://www.r2d3.us/%E5%9C%96%E8%A7%A3%E6%A9%9F%E5%99%A8%E5%AD%B8%E7%BF%92%E7%AC%AC%E4%B8%80%E7%AB%A0/?fbclid=IwAR12yJBtkfIjoAMuP0ZD_00xfOOWtFzODWWvhfFTDh14BKjAZTlrKC4jdyU" title="title">圖解機器學習<i class="fas fa-hand-point-left"></i></a></div><img class="step" src="./imgs/step.png" alt=""/></div><div class="dl"><img class="network" src="./imgs/network.jpg" alt=""/><div class="content"><h3 class="staring">深度學習 Deep Learning</h3><p>深度學習為機器學習的一分支領域，主要利用「深度神經網路」(Deep Neural Network)，模擬人類大腦神經系統，讓電腦機器自己從資料中學習這組資料可以做什麼樣的資訊擷取。</p><br/><p>深度神經網路主要分為三種層次:</p>資料透過這一連串的類神經結構傳遞，就能夠讓機器學習到某些特徵，並用這些特徵來達到人類想要達成的目的。<ul class="layer"><li>輸入層-Input layer</li><li>隱藏層-Hidden layer</li><li>輸出層-Output layer</li></ul></div></div><div class="neural-network"><h4>點擊以下圖片可以前往類神經網路的展示網站，可自訂神經元 / 隱藏層 / 各項參數等</h4><a href="https://playground.tensorflow.org/#activation=tanh&amp;batchSize=10&amp;dataset=circle&amp;regDataset=reg-plane&amp;learningRate=0.03&amp;regularizationRate=0&amp;noise=0&amp;networkShape=4,4,4,4,4&amp;seed=0.05245&amp;showTestData=false&amp;discretize=false&amp;percTrainData=50&amp;x=true&amp;y=true&amp;xTimesY=true&amp;xSquared=true&amp;ySquared=true&amp;cosX=false&amp;sinX=true&amp;cosY=false&amp;sinY=false&amp;collectStats=false&amp;problem=classification&amp;initZero=false&amp;hideText=false" title="title"><img src="./imgs/try.png" alt=""/></a></div><div class="nlp"><div class="content"><h3 class="staring">自然語言處理 Natural Language Processing, NLP</h3><p>自然語言處理，是針對人類語言文字進行各種自動化處理的技術，其目標是要讓電腦認識、分析、理解、合成人類語言，進行各式運算，希望最終能以自然語言為媒介，讓電腦跟人類順暢的溝通，以完成各項指定的任務。</p><p>常見應用:</p><ul><li>機器翻譯: 分析輸入的語言並翻譯成指定需要的語言</li><li>情緒分析: 分析人類說話的語氣字眼等</li><li>搜尋建議: 將搜尋結果相關的字詞推薦給搜尋者，例如常常可以看到google搜尋頁面底下出現: xxx的相關搜尋</li><li>詞類標示: 將輸入的文字進行詞類分析並標示出來</li><li>語音辨識: 常見應用為將說出的話轉為文字，利用聲音控制機器等</li></ul></div><div class="voice-input"><form><p class="ml2">來試試語音輸入訊息吧~ (需要使用麥克風)</p><div class="form-group"><label>最後結果</label><input class="form-control" id="textBox" type="text"/></div><div class="form-group"><label>中間結果</label><input class="form-control" id="tempBox" type="text"/></div><div class="lang">辨識語言：<select id="langCombo"><option value="en-US">英文(美國)</option><option value="cmn-Hant-TW">中文(台灣)</option></select><button class="btn btn-primary" id="startStopButton" type="button" onclick="startButton(event)">辨識</button></div><div class="result"><label id="infoBox"></label></div></form></div></div><div class="border"><div class="view"><h3 class="staring">電腦視覺 Computer Vision</h3><p>利用一個代替人眼的圖像感測器獲取物體的圖像，將圖像轉換成數字圖像，並利用電腦進行深度學習，模擬人的判別準則去理解和識別圖像，達到分析圖像和作出結論的目的</p><p>常見應用包括:</p><p>* 人類身體部位辨識: 指紋辨識、臉部辨識、視網膜辨識、虹膜辨識、掌紋辨識</p><p>* 自動駕駛: 必須在車輛部署攝像頭、激光雷達、毫米波雷達等傳感器才能辨識周圍的障礙物，將拍攝到的障礙物轉為矩形並進行迴避</p></div></div><div class="system"><div class="content"><hr/><h3>專家系統 Expert System</h3><p>專家系統是一種在特定領域內具有專家水平解決問題能力的程式系統。它能夠有效地運用專家多年積累的有效經驗和專門知識，通過模擬專家的思維過程，解決需要專家才能解決的問題。</p><p>專家系統的組成要件通常包含如下6部分：</p><ul><li>知識庫：知識庫包含所有解決問題的知識，如解決問題的策略及關於問題的事實。</li><li>推論機：主要是提供軟體將讀者問題和資料庫的事實、規則連接起來，進行邏輯推演的步驟。</li><li>使用者介面：便利系統與使用者之間的溝通。其功用在於使輸入、輸出的相關資料能夠溝通，並得以解決問題。</li><li>工作區：記憶體的一部分，所有知識庫中的資料都儲存在工作區，並可用以儲存遇到的問題及狀況。</li><li>解釋次系統：解釋次系統可顯示出推理的過程，並答覆使用者有關問題。</li><li>知識獲取次系統：人類專家可隨時藉由此知識獲取次系統，輸入或更新專家知識及推理方法，以增加專家系統的功能。</li></ul><hr/></div><img src="./imgs/robot3.jpg" alt=""/></div><div class="footer"><p>Copyright © AI Introduction 2019 - 建議使用 Chrome 瀏覽器，搭配 1440x697 可得最佳瀏覽畫面</p></div><div class="toTop"><a href="#"><i class="fas fa-arrow-circle-up"><span>回到頂端</span></i></a></div><script>var infoBox; // 訊息 label
+var textBox; // 最終的辨識訊息 text input
+var tempBox; // 中間的辨識訊息 text input
+var startStopButton; // 「辨識/停止」按鈕
+var final_transcript = ''; // 最終的辨識訊息的變數
+var recognizing = false; // 是否辨識中
+
+function startButton(event) {
+  infoBox = document.getElementById("infoBox"); // 取得訊息控制項 infoBox
+  textBox = document.getElementById("textBox"); // 取得最終的辨識訊息控制項 textBox
+  tempBox = document.getElementById("tempBox"); // 取得中間的辨識訊息控制項 tempBox
+  startStopButton = document.getElementById("startStopButton"); // 取得「辨識/停止」這個按鈕控制項
+  langCombo = document.getElementById("langCombo"); // 取得「辨識語言」這個選擇控制項
+
+  if (recognizing) { // 如果正在辨識，則停止。
+    recognition.stop();
+  } else { // 否則就開始辨識
+    textBox.value = ''; // 清除最終的辨識訊息
+    tempBox.value = ''; // 清除中間的辨識訊息
+    final_transcript = ''; // 最終的辨識訊息變數
+    recognition.lang = langCombo.value; // 設定辨識語言
+    recognition.start(); // 開始辨識
+  }
+}
+
+// 如果找不到 window.webkitSpeechRecognition 這個屬性，就是不支援語音辨識，要求使用者更新瀏覽器。 
+if (!('webkitSpeechRecognition' in window)) {
+  infoBox.innerText = "本瀏覽器不支援語音辨識，請更換瀏覽器！(Chrome 25 版以上才支援語音辨識)";
+} else {
+  // 建立語音辨識物件 webkitSpeechRecognition
+  var recognition = new webkitSpeechRecognition();
+  recognition.continuous = true; // 設定連續辨識模式
+  recognition.interimResults = true; // 設定說話時會立即辨識
+
+  // 開始辨識
+  recognition.onstart = function () {
+    recognizing = true; // 設定為辨識中
+    startStopButton.value = "按此停止"; // 辨識中...按鈕改為「按此停止」。  
+    infoBox.innerText = "辨識中..."; // 顯示訊息為「辨識中」...
+  };
+
+  // 辨識完成
+  recognition.onend = function () {
+    recognizing = false; // 設定為「非辨識中」
+    startStopButton.value = "開始辨識"; // 辨識完成...按鈕改為「開始辨識」。
+    infoBox.innerText = ""; // 不顯示訊息
+  };
+
+  // 辨識有任何結果時
+  recognition.onresult = function (event) {
+    var interim_transcript = ''; // 中間結果
+    for (var i = event.resultIndex; i < event.results.length; ++i) { // 對於每一個辨識結果
+      if (event.results[i].isFinal) { // 如果是最終結果
+        final_transcript += event.results[i][0].transcript; // 將其加入最終結果中
+      } else { // 否則
+        interim_transcript += event.results[i][0].transcript; // 將其加入中間結果中
+      }
+    }
+    if (final_transcript.trim().length > 0) // 如果有最終辨識文字
+      textBox.value = final_transcript; // 顯示最終辨識文字
+    if (interim_transcript.trim().length > 0) // 如果有中間辨識文字
+      tempBox.value = interim_transcript; // 顯示中間辨識文字
+  };
+}
+
+var textWrapper = document.querySelector('.ml3');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+    loop: true
+  })
+  .add({
+    targets: '.ml3 .letter',
+    opacity: [0, 1],
+    easing: "easeInOutQuad",
+    duration: 1125,
+    delay: function (el, i) {
+      return 75 * (i + 1)
+    }
+  }).add({
+    targets: '.ml3',
+    opacity: 0,
+    duration: 500,
+    easing: "easeOutExpo",
+    delay: 500
+  });
+
+var textWrapper = document.querySelector('.ml2');
+textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({
+    loop: true
+  })
+  .add({
+    targets: '.ml2 .letter',
+    scale: [4, 1],
+    opacity: [0, 1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function (el, i) {
+      return 70 * i;
+    }
+  }).add({
+    targets: '.ml2',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });</script></body></html>
